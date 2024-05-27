@@ -6,13 +6,14 @@ University of Chicago
 {% extends "base.html" %}
 {% block title %}Annotate{% endblock %}
 {% block body %}
-  {% include "header.html" %}
-  <div class="container">
-    <div class="page-header">
-      <h2>Annotation Request Received</h2>
-    </div>
+{% include "header.html" %}
+<div class="container">
+  <div class="page-header">
+    <h2>Annotation Request Received</h2>
+  </div>
 
-    <p>Your annotation request was received and assigned ID <a href="{{ url_for('annotation_details', id=job_id) }}">{{ job_id }}</a></p>
+  <p>Your annotation request was received and assigned ID <a href="{{ url_for('annotation_details', id=job_id) }}">{{
+      job_id }}</a></p>
 
-  </div> <!-- container -->
+</div> <!-- container -->
 {% endblock %}

@@ -84,7 +84,7 @@ class Config(object):
   AWS_S3_RESULTS_BUCKET = "mpcs-cc-gas-results"
   # Set the S3 key (object name) prefix to your CNetID
   # Keep the trailing '/' if using my upload code in views.py
-  AWS_S3_KEY_PREFIX = "<CNetID>/"
+  AWS_S3_KEY_PREFIX = "bleiva/"
   AWS_S3_ACL = "private"
   AWS_S3_ENCRYPTION = "AES256"
 
@@ -92,15 +92,23 @@ class Config(object):
 
   # Change the ARNs below to reflect your SNS topics
   AWS_SNS_JOB_REQUEST_TOPIC = \
-    "some-arn-job-requests:<CNetID>_job_requests"
+    "arn:aws:sns:us-east-1:659248683008:bleiva_job_requests"
   AWS_SNS_JOB_COMPLETE_TOPIC = \
-    "some-arn-job-results:<CNetID>_job_results"
+    "arn:aws:sns:us-east-1:659248683008:bleiva_job_results"
+
+  # Change the ARNs below to reflect your SQS queues
+  AWS_SQS_JOB_REQUEST_QUEUE = \
+    "arn:aws:sqs:us-east-1:659248683008:bleiva_job_requests"
+  AWS_SQS_JOB_COMPLETE_QUEUE = \
+    "arn:aws:sqs:us-east-1:659248683008:bleiva_job_results"
+  AWS_SQS_GLACIER_RESTORE_QUEUE_URL = \
+    "https://sqs.us-east-1.amazonaws.com/659248683008/bleiva_glacier_restore"
 
   # Change the table name to your own
-  AWS_DYNAMODB_ANNOTATIONS_TABLE = "<CNetID>_annotations"
+  AWS_DYNAMODB_ANNOTATIONS_TABLE = "bleiva_annotations"
 
   # Change the email address to your username
-  MAIL_DEFAULT_SENDER = "<CNetID>@mpcs-cc.com"
+  MAIL_DEFAULT_SENDER = "bleiva@mpcs-cc.com"
 
   # Time before free user results are archived (in seconds)
   FREE_USER_DATA_RETENTION = 300

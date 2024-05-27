@@ -19,7 +19,8 @@ fi
   --log-file=$LOG_TARGET \
   --log-level=debug \
   --workers=$GUNICORN_WORKERS \
-  --certfile=$SSL_CERT_PATH \
-  --keyfile=$SSL_KEY_PATH \
+  --certfile=/home/ec2-user/mpcs-cc/fullchain.pem \
+  --keyfile=/home/ec2-user/mpcs-cc/privkey.pem \
   --bind=$GAS_APP_HOST:$GAS_HOST_PORT gas:app
+
 
