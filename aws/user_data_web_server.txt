@@ -1,0 +1,13 @@
+#!/bin/bash
+yum update -y
+yum install -y python3 git zip unzip
+pip3 install awscli
+aws configure set default.region us-east-1
+aws s3 cp s3://mpcs-students/bleiva/gas_web_server.zip /home/ec2-user/gas_web_server.zip
+unzip /home/ec2-user/gas_web_server.zip -d /home/ec2-user/mpcs-cc/
+chown -R ec2-user:ec2-user /home/ec2-user/mpcs-cc/
+aws s3 cp s3://mpcs-students/your-home-folder/fullchain.pem /home/ec2-user/mpcs-cc/fullchain.pem
+aws s3 cp s3://mpcs-students/your-home-folder/privkey.pem /home/ec2-user/mpcs-cc/privkey.pem
+chown ec2-user:ec2-user /home/ec2-user/mpcs-cc/fullchain.pem /home/ec2-user/mpcs-cc/privkey.pem
+chmod 600 /home/ec2-user/mpcs-cc/fullchain.pem /home/ec2-user/mpcs-cc/privkey.pem
+sudo -u ec2-user /home/ec2-user/mpcs-cc/gas/web/run_gas.sh &
