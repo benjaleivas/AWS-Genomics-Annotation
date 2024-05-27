@@ -4,7 +4,7 @@ Directory contents are as follows:
 
 - `/ann` - Annotator files
 - `/aws` - AWS user data files
-- `/web` - Web app files
+- `/web` - Web application files
 - `/util` - Utility scripts for notifications, archival, and restoration
 
 ## Architecture
