@@ -1,6 +1,4 @@
-# gas-framework
-
-An enhanced web framework (based on [Flask](http://flask.pocoo.org/)) for use in the capstone project. Adds robust user authentication (via [Globus Auth](https://docs.globus.org/api/auth)), modular templates, and some simple styling based on [Bootstrap](http://getbootstrap.com/).
+# Genomics Annotation Service
 
 Directory contents are as follows:
 
@@ -9,11 +7,8 @@ Directory contents are as follows:
 - `/util` - Utility scripts for notifications, archival, and restoration
 - `/aws` - AWS user data files
 
-# Notes for the grader
-
-I wasn't able to create the alarms and autoscaling policies detailed in question 12d-12g. For some reason, when I tried to add the group created in 12c (which can be confirmed it was created by looking in the Autoscaling Group console), 'bleiva-ann-auto-scaler' doesn't appear in the drag down menu, it only appears the web version of it.
-
-I know how to do 12d-12g, since its only replicating the process of 12a-12d. If possible, and since the deadline has already passed, I would love to have permission to try and redo 'bleiva-ann-auto-scaler' and see if that allows me to create the alarms and policies.
+## Architecture:
+<img width="612" alt="aws_architecture" src="https://github.com/MPCS-51083-Cloud-Computing/final-project-benjaleivas/assets/96876463/666d3a0d-4fe8-4e87-bfd6-0c137658ac2c">
 
 ## Setup
 
