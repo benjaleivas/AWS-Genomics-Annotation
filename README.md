@@ -2,10 +2,10 @@
 
 Directory contents are as follows:
 
-- `/web` - The GAS web app files
 - `/ann` - Annotator files
-- `/util` - Utility scripts for notifications, archival, and restoration
 - `/aws` - AWS user data files
+- `/web` - Web app files
+- `/util` - Utility scripts for notifications, archival, and restoration
 
 ## Architecture
 <img width="612" alt="aws_architecture" src="https://github.com/MPCS-51083-Cloud-Computing/final-project-benjaleivas/assets/96876463/666d3a0d-4fe8-4e87-bfd6-0c137658ac2c">
